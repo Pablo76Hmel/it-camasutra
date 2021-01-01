@@ -1,0 +1,36 @@
+
+  .item {
+    font-weight: 800;
+    background:lightblue;
+    padding-top: 10px;
+    margin: 5px;
+  }
+
+  .trel {
+    display:block;
+    height: 50px;
+    width: 50px;
+    background: black;
+  }
+
+  .item p {
+    padding-left:10px;
+  }
+  .int {
+    padding-left: 200px;
+    font-weight: bold;
+    font-size: 15px;
+    color:black;
+
+  }
+  .irc {
+    color:red;
+    padding-left: 20px;
+    font-size: 25px;
+  }
+  .sum {
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    color:blueviolet;
+  }

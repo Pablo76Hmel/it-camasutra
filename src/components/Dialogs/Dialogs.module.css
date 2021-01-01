@@ -1,0 +1,21 @@
+
+.messages {
+    color:gray;
+    font-weight: 900;
+}
+
+.dialogs {
+    display:grid;
+    grid-template-columns: 2fr 10fr;
+    }
+    
+.dialogItem {
+        padding: 10px;
+    }
+
+.textArea {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+}
+    
