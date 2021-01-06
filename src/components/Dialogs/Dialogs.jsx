@@ -7,7 +7,6 @@ import { addMessageActionCreater, onMessageChangeActionCreator } from '../redux/
 
 
 const Dialogs = ( props ) => {
-
 let messageElements=props.state.messagesData.messages.map( s=>
 <MessageItems message={s.message} />)
 let dialogElements=props.state.dialogData.map( dialog=>

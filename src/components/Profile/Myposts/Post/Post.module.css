@@ -19,7 +19,8 @@
   .int {
     padding-left: 200px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 45px;
+    text-align:center;
     color:black;
 
   }

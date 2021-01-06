@@ -12,20 +12,30 @@ let initialState = {
  ]
 };
 const postReducer = (state=initialState,action)=> {
-    if (action.type===ADD_POST){
-        let newPost = {
-          id:6,
-          message:state.newPostText,
-          number:6,
-          likeSum:2
+      let stateCopy
+    switch (action.type){
+      case ADD_POST: {
+          // let newPost = {
+          // id:6,
+          // message:state.newPostText,
+          // number:6,
+          // likeSum:2};
+        return {...state,
+              post:[...state.post,{id:6,message:state.newPostText,number:6,likeSum:2}],
+              newPostText:""
+        };
+        // stateCopy.post = [...state.post,{id:6,message:state.newPostText,number:6,likeSum:2}];
+        // stateCopy.post.push(newPost);
+        // stateCopy.newPostText="";
         }
-        state.post.push(newPost);
-        state.newPostText="";
-    
-      } 
-        else if (action.type===NEW_POST_TEXT){
-            state.newPostText=action.newText;
-      }
-    return state
+      case NEW_POST_TEXT: {
+        return {...state,
+          newPostText:action.newText
+        }; 
+        // stateCopy.newPostText=action.newText;
+    }
+      default:
+        return state;
+}
 }
 export default postReducer

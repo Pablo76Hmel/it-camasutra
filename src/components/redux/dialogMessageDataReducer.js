@@ -17,24 +17,30 @@ let initialState= {
          {message:'Me too.'},
          {message:'Gelll'}    
               ]  
- 
    }  
-  }
+  };
 
  const dialogReducer = (state=initialState,action)=>{
-   
-     
-     if (action.type===ADD_MESSAGE){
-        let message={message:state.messagesData.newMessageText}
-        
-        state.messagesData.messages.push(message);
-        state.messagesData.newMessageText="";
-    } 
-      else if (action.type===NEW_MESSAGE_TEXT){
-       state.messagesData.newMessageText=action.newText;   
-    }
-   
-    return state
-}
+  let stateCopy;   
+  switch (action.type){
+      case ADD_MESSAGE: {
+        stateCopy={...state,
+          };
+        stateCopy.messagesData.messages=[...state.messagesData.messages,
+          {message:stateCopy.messagesData.newMessageText}];
 
+        stateCopy.messagesData.newMessageText="";
+        return stateCopy;
+      } 
+      case NEW_MESSAGE_TEXT: {
+          stateCopy={...state,
+        };
+        // stateCopy.messagesData={...state.messagesData};
+         stateCopy.messagesData.newMessageText=action.newText;   
+        return stateCopy;
+      }
+      default:
+        return state;
+  }
+}
 export default dialogReducer

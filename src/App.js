@@ -23,15 +23,12 @@ function App(props) {
               <Nav className="nav"/>  
           <div className="app-wrapper-content"> 
               <Route path='/profile' render={ ()=> 
-                <Profile 
-                    // store={props.store}
-                 /> 
+                <Profile /> 
                      }/>
                 <Route path='/dialogs' render={  ()=>
-                <DialogsContainer 
-                    // store={props.store} 
-                />
+                <DialogsContainer />
                      }/>
+              <Route path='/users' render={ () => <div>Users</div>}/>
               <Route path='/music' render={ () => <Music />}/>
               <Route path='/news' render={ ()=><News />}/>
               <Route path='/setting' render={ ()=><Setting />}/>

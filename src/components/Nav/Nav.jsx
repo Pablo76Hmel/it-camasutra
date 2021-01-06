@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom"
+
 const Nav = () => {
     return (<div className={s.nav}>
       <div  className={s.item}>
